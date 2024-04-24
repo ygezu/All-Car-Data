@@ -23,13 +23,13 @@ This is all the code used to clean the data and make variables usable for our sh
 
 
 1. Adding "Type" and "Group" variables with default values "NA" and "G1" respectively.
-'''
-`cars1 <- cars1[, c(2,4,5,8)] #No type recorded`
 
-`cars1$Type <- "NA"`
+    cars1 <- cars1[, c(2,4,5,8)] #No type recorded
 
-`cars1$Group <- "G1"`
-'''
+    cars1$Type <- "NA"
+
+    cars1$Group <- "G1"
+ 
 
 `#cars2 No Car type`
 
