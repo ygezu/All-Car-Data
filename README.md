@@ -16,6 +16,9 @@ Data Cruisers and seven other groups collected data from a speed detection radar
 None of these groups are in any particular order
 
 ## Cleaning
+
+This is all the code used to clean the data and make variables usable for our shiny application, such as changing names to Name or the speed to Speed instead of mph. 
+
 `#cars1`
 
 `cars1 <- cars1[, c(2,4,5,8)] #No type recorded`
@@ -169,3 +172,36 @@ None of these groups are in any particular order
 `cars3 <- head(cars3 , -8)`
 
 `cars5 <- head(cars5, -53)`
+
+## Maximum
+
+Presented is the graph of the fastest car recorded out of all groups which was 50 miles per hour
+
+<div align = "center">
+<img src =" https://github.com/ygezu/All-Car-Data/blob/main/MaxAllData.png" width = "700">
+</div>
+
+## Minimum
+
+Presented is the graph of the slowest car recorded out of all groups which was 12 miles per hour
+
+<div align = "center">
+<img src =" https://github.com/ygezu/All-Car-Data/blob/main/MinAllData.png" width = "700">
+</div>
+
+## Average
+
+We took the average speed of each car type and found that every cars speed was over the speed limit of 30 miles per hour. If car type was not recorded it was labeled as NA.
+
+<div align = "center">
+<img src =" https://github.com/ygezu/All-Car-Data/blob/main/AverageByCarAll.png" width = "700">
+</div>
+
+## Bigger Picture
+
+Here we plotted everyone's data with the different colors corresponding to different groups
+
+<div align = "center">
+<img src =" https://github.com/ygezu/All-Car-Data/blob/main/EveryonesData.png" width = "700">
+</div>
+
