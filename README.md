@@ -30,20 +30,15 @@ This is all the code used to clean the data and make variables usable for our sh
 
         cars1$Group <- "G1"
  
-
-`#cars2 No Car type`
-
-`cars2 <- cars2[, -c(4,5)] #No type recorded`
-
-`cars2$Type <- "NA" `
-
-`cars2$Group <- "G2"`
-
-`names(cars2)[names(cars2) == "Collector"] <- "Name"`
-
-`names(cars2)[names(cars2) == "Time.of.Day"] <- "Time"`
-
-`names(cars2)[names(cars2) == "MPH"] <- "Speed"`
+2. Removing unnecessary columns, adding "Type" and "Group" with default values, and renaming columns.
+        #cars2 No Car type
+   
+        cars2 <- cars2[, -c(4,5)] #No type recorded
+        cars2$Type <- "NA" 
+        cars2$Group <- "G2"
+        names(cars2)[names(cars2) == "Collector"] <- "Name"
+        names(cars2)[names(cars2) == "Time.of.Day"] <- "Time"
+        names(cars2)[names(cars2) == "MPH"] <- "Speed"
 
 
 `#cars3`
