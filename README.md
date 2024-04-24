@@ -12,17 +12,24 @@ Data Cruisers and seven other groups collected data from a speed detection radar
 6. Group Six = MergedCarData
 7. Group Seven = Speed analyst 332 Car Data
 8. Group Eight = Updated Car Tracking
+
 None of these groups are in any particular order
 
 ## Cleaning
 `#cars1`
+
 `cars1 <- cars1[, c(2,4,5,8)] #No type recorded`
+
 `cars1$Type <- "NA"`
+
 `cars1$Group <- "G1"`
 
 `#cars2 No Car type`
+
 `cars2 <- cars2[, -c(4,5)] #No type recorded`
+
 `cars2$Type <- "NA" `
+
 `cars2$Group <- "G2"`
 
 names(cars2)[names(cars2) == "Collector"] <- "Name"
