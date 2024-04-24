@@ -196,8 +196,11 @@ We took the average speed of each car type and found that every cars speed was o
 
 ## Bigger Picture
 
-Here we plotted everyone's data with the different colors corresponding to different groups
+Here we plotted everyone's data with the different colors corresponding to different groups. The x-axis is time(in miliary time) and the y-axis is the speed (in miles per hour).
 <div align = "center">
-<img src =" https://github.com/ygezu/All-Car-Data/blob/main/EveryonesData.png" width = "700">
+<img src ="https://github.com/ygezu/All-Car-Data/blob/main/EveryonesData.png" width = "700">
 </div>
+
+## Analysis
+
 
