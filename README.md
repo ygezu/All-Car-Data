@@ -32,81 +32,140 @@ None of these groups are in any particular order
 
 `cars2$Group <- "G2"`
 
-names(cars2)[names(cars2) == "Collector"] <- "Name"
-names(cars2)[names(cars2) == "Time.of.Day"] <- "Time"
-names(cars2)[names(cars2) == "MPH"] <- "Speed"
+`names(cars2)[names(cars2) == "Collector"] <- "Name"`
 
-#cars3
-cars3 <- cars3[, -c(1,4,7)]
-cars3$Group <- "G3"
+`names(cars2)[names(cars2) == "Time.of.Day"] <- "Time"`
 
-#cars4
-cars4 <- cars4[, c(1, 5,7,9,10)]
-
-cars4$Group <- "G4"
-names(cars4)[names(cars4) == "Collector.Name"] <- "Name"
-names(cars4)[names(cars4) == "Vehicle.Type"] <- "Type"
-names(cars4)[names(cars4) == "Speed.MPH"] <- "Speed"
-
-#cars5
-cars5 <- cars5[, c(2, 3, 4)] #NO type recorded
-
-cars5$Group <- "G5"
-names(cars5)[names(cars5) == "MPH"] <- "Speed"
-names(cars5)[names(cars5) == "Temp"] <- "Temperature"
-
-cars5$Name <- "NA"
-cars5$Type <- "NA"
-
-#cars6
-cars6 <- cars6[, c(2,3,7,8)] #NO type recorded
-
-cars6$Type <- "NA"
-cars6$Group <- "G6"
-
-#cars7
-cars7 <- cars7[, c(1,3,4,5,7)]
-
-cars7$Group <- "G7"
-names(cars7)[names(cars7) == "Student"] <- "Name"
-names(cars7)[names(cars7) == "MPH"] <- "Speed"
-names(cars7)[names(cars7) == "Type.of.se"] <- "Type"
-names(cars7)[names(cars7) == "Time.of.Day"] <- "Time"
-
-#cars8
-cars8 <- cars8[, -c(1)]
-
-cars8$Group <- "G8"
-names(cars8)[names(cars8) == "Time.of.Day"] <- "Time"
-names(cars8)[names(cars8) == "Type.of.Car"] <- "Type"
-names(cars8)[names(cars8) == "Speed..mph."] <- "Speed"
-names(cars8)[names(cars8) == "Weather"] <- "Temperature"
+`names(cars2)[names(cars2) == "MPH"] <- "Speed"`
 
 
+`#cars3`
 
-#FIX TIME
-cars1$Time <- strptime(cars1$Time, format = "%H:%M")
-cars1$Time <- format(cars1$Time, format = "%I:%M %p")
-cars1$Time <- sub("AM", "PM", cars1$Time)
-#cars2$Time <- strptime(cars2$Time, format = "%H:%M")
-#cars2$Time <- format(cars2$Time, format = "%I:%M %p")
-cars4$Time <- strptime(cars4$Time, format = "%H:%M")
-cars4$Time <- format(cars4$Time, format = "%I:%M %p")
-cars3$Time <- strptime(cars3$Time, format = "%H:%M")
-cars3$Time <- format(cars3$Time, format = "%I:%M %p")
-cars5$Time <- format(as.POSIXct(cars5$Time, format = "%I:%M:%S %p"), format = "%I:%M %p")
-cars6$Time <- strptime(cars6$Time, format = "%H:%M")
-cars6$Time <- format(cars6$Time, format = "%I:%M %p")
-to_change_indices <- as.numeric(substring(cars6$Time, 1, 2)) >= 1 & as.numeric(substring(cars6$Time, 1, 2)) <= 7
-cars6$Time[to_change_indices] <- sub("AM", "PM", cars6$Time[to_change_indices])
-cars7$Time <- strptime(cars7$Time, format = "%H:%M")
-cars7$Time <- format(cars7$Time, format = "%I:%M %p")
-cars7$Time <- sub("AM", "PM", cars7$Time)
-cars8$Time <- strptime(cars8$Time, format = "%H:%M")
-cars8$Time <- format(cars8$Time, format = "%I:%M %p")
+`cars3 <- cars3[, -c(1,4,7)]`
+
+`cars3$Group <- "G3"`
+
+`#cars4`
+
+`cars4 <- cars4[, c(1, 5,7,9,10)]`
 
 
-#REMOVING NULL
-cars1 <- head(cars1, -2)
-cars3 <- head(cars3 , -8)
-cars5 <- head(cars5, -53)
+`cars4$Group <- "G4"`
+
+`names(cars4)[names(cars4) == "Collector.Name"] <- "Name"`
+
+`names(cars4)[names(cars4) == "Vehicle.Type"] <- "Type"`
+
+`names(cars4)[names(cars4) == "Speed.MPH"] <- "Speed"`
+
+
+`#cars5`
+
+`cars5 <- cars5[, c(2, 3, 4)] #NO type recorded`
+
+
+`cars5$Group <- "G5"`
+
+`names(cars5)[names(cars5) == "MPH"] <- "Speed"`
+
+`names(cars5)[names(cars5) == "Temp"] <- "Temperature"`
+
+
+`cars5$Name <- "NA"`
+
+`cars5$Type <- "NA"`
+
+
+`#cars6`
+
+`cars6 <- cars6[, c(2,3,7,8)] #NO type recorded`
+
+
+`cars6$Type <- "NA"`
+
+`cars6$Group <- "G6"`
+
+
+`#cars7`
+
+`cars7 <- cars7[, c(1,3,4,5,7)]`
+
+
+`cars7$Group <- "G7"`
+
+`names(cars7)[names(cars7) == "Student"] <- "Name"`
+
+`names(cars7)[names(cars7) == "MPH"] <- "Speed"`
+
+`names(cars7)[names(cars7) == "Type.of.se"] <- "Type"`
+
+`names(cars7)[names(cars7) == "Time.of.Day"] <- "Time"`
+
+
+`#cars8`
+
+`cars8 <- cars8[, -c(1)]`
+
+
+`cars8$Group <- "G8"`
+
+`names(cars8)[names(cars8) == "Time.of.Day"] <- "Time"`
+
+`names(cars8)[names(cars8) == "Type.of.Car"] <- "Type"`
+
+`names(cars8)[names(cars8) == "Speed..mph."] <- "Speed"`
+
+`names(cars8)[names(cars8) == "Weather"] <- "Temperature"`
+
+
+
+
+`#FIX TIME`
+
+`cars1$Time <- strptime(cars1$Time, format = "%H:%M")`
+
+`cars1$Time <- format(cars1$Time, format = "%I:%M %p")`
+
+`cars1$Time <- sub("AM", "PM", cars1$Time)`
+
+`#cars2$Time <- strptime(cars2$Time, format = "%H:%M")`
+
+`#cars2$Time <- format(cars2$Time, format = "%I:%M %p")`
+
+`cars4$Time <- strptime(cars4$Time, format = "%H:%M")`
+
+`cars4$Time <- format(cars4$Time, format = "%I:%M %p")`
+
+`cars3$Time <- strptime(cars3$Time, format = "%H:%M")`
+
+`cars3$Time <- format(cars3$Time, format = "%I:%M %p")`
+
+`cars5$Time <- format(as.POSIXct(cars5$Time, format = "%I:%M:%S %p"), format = "%I:%M %p")`
+
+`cars6$Time <- strptime(cars6$Time, format = "%H:%M")`
+
+`cars6$Time <- format(cars6$Time, format = "%I:%M %p")`
+
+`to_change_indices <- as.numeric(substring(cars6$Time, 1, 2)) >= 1 & as.numeric(substring(cars6$Time, 1, 2)) <= 7`
+
+`cars6$Time[to_change_indices] <- sub("AM", "PM", cars6$Time[to_change_indices])`
+
+`cars7$Time <- strptime(cars7$Time, format = "%H:%M")`
+
+`cars7$Time <- format(cars7$Time, format = "%I:%M %p")`
+
+`cars7$Time <- sub("AM", "PM", cars7$Time)`
+
+`cars8$Time <- strptime(cars8$Time, format = "%H:%M")`
+
+`cars8$Time <- format(cars8$Time, format = "%I:%M %p")`
+
+
+
+`#REMOVING NULL`
+
+`cars1 <- head(cars1, -2)`
+
+`cars3 <- head(cars3 , -8)`
+
+`cars5 <- head(cars5, -53)`
