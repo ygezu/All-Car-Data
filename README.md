@@ -1,9 +1,11 @@
 # All-Car-Data
 ## Contributors
 Summer Chalmers, Yanet Gezu, and Patrick Mayer
+
 ## Introduction
-Data Cruisers and seven other groups collected data from a speed detection radar located on 30th St and 24th Avenue in Rock Island IL. This data included speed, time, weather, temperature, type of car, and who collected the data. Our group found that the best three variables in common within all the groups were speed, time, and temperature. Using these variables we conducted the same anaylysis as we did on our own data, finding the maximum and minimum speed as well as the average speed of every group that collected data. The times of the data being collected range from early morning times to late into the evening. In a short analysis will follow of whether the data supports our finding in our scholary research. 
-## Dictionary
+Data Cruisers and seven other groups collected data from a speed detection radar located on 30th St and 24th Avenue in Rock Island IL. This data included speed, time, weather, temperature, type of car, and who collected the data. Our group found that the best three variables in common within all the groups were speed, time, and temperature. Using these variables we conducted the same analysis as we did with our own data, finding the maximum and minimum speed as well as the average speed of every group that collected data. The times of the data being collected range from early morning times to late into the evening. We will finish off our analysis by correlating these results with our scholarly research. 
+
+## Data Dictionary
 1. Group One = CarData(2)
 2. Group Two = IRL_Car_Data
 3. Group Three = Car_Data
@@ -15,17 +17,19 @@ Data Cruisers and seven other groups collected data from a speed detection radar
 
 None of these groups are in any particular order
 
-## Cleaning
+## Data Cleaning
 
 This is all the code used to clean the data and make variables usable for our shiny application, such as changing names to Name or the speed to Speed instead of mph. 
 
-`#cars1`
 
+1. Adding "Type" and "Group" variables with default values "NA" and "G1" respectively.
+'''
 `cars1 <- cars1[, c(2,4,5,8)] #No type recorded`
 
 `cars1$Type <- "NA"`
 
 `cars1$Group <- "G1"`
+'''
 
 `#cars2 No Car type`
 
@@ -123,7 +127,7 @@ This is all the code used to clean the data and make variables usable for our sh
 
 
 
-`#FIX TIME`
+#FIX TIME
 
 `cars1$Time <- strptime(cars1$Time, format = "%H:%M")`
 
