@@ -177,21 +177,21 @@ This is all the code used to clean the data and make variables usable for our sh
 
 Presented is the graph of the fastest car recorded out of all groups which was 50 miles per hour
 <div align = "center">
-<img src =" https://github.com/ygezu/All-Car-Data/blob/main/MaxAllData.png" width = "700">
+<img src ="https://github.com/ygezu/All-Car-Data/blob/main/MaxAllData.png" width = "700">
 </div>
 
 ## Minimum
 
 Presented is the graph of the slowest car recorded out of all groups which was 12 miles per hour
 <div align = "center">
-<img src =" https://github.com/ygezu/All-Car-Data/blob/main/MinAllData.png" width = "700">
+<img src ="https://github.com/ygezu/All-Car-Data/blob/main/MinAllData.png" width = "700">
 </div>
 
 ## Average
 
 We took the average speed of each car type and found that every cars speed was over the speed limit of 30 miles per hour. If car type was not recorded it was labeled as NA.
 <div align = "center">
-<img src =" https://github.com/ygezu/All-Car-Data/blob/main/AverageByCarAll.png" width = "700">
+<img src ="https://github.com/ygezu/All-Car-Data/blob/main/AverageByCarAll.png" width = "700">
 </div>
 
 ## Bigger Picture
