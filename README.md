@@ -203,4 +203,5 @@ Here we plotted everyone's data with the different colors corresponding to diffe
 
 ## Analysis
 
+As shown in the previous picture all the data is one place presented by time and speed. This data still supports our orginal theory that cars speed more in the PM rather than in the AM as scholarly reseach stated. Yes most of the cars go over the speed limit of 30 miles per hour, but the majority of the points that do are in the later hours of the day. Every car's average speed was over 30 miles per hour, roughly at 33 miles per hour. 
 
